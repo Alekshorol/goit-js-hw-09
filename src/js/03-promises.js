@@ -6,15 +6,15 @@ let amount = 0;
 
 const formEl = document.querySelector('.form');
 
-formEl.addEventListener('input', onFormElInput);
-formEl.addEventListener('submit', onFormElSubmit);
+formEl.addEventListener('input', onFormInput);
+formEl.addEventListener('submit', onFormSubmit);
 
-function onFormElSubmit(event) {
+function onFormSubmit(event) {
   event.preventDefault();
   generatePromises(firstDelay, delayStep, amount);
 }
 
-function onFormElInput(event) {
+function onFormInput(event) {
   if (event.target.name === 'delay') {
     firstDelay = Number(event.target.value);
   }
